@@ -107,7 +107,7 @@ Für die Methoden der Klasse Blumenladen.java sind folgende Anforderungen gegebe
 Das übergebene Produkt (Instanz) soll verkauft werden. Dazu sollte
 
 - der Parameter nicht `null` sein (`false` ist zu retournieren).
-- geprüft werden, ob product1 oder product2 sind. Wenn nicht. `return false`
+- geprüft werden, ob product1 oder product2 der Parameter sind. Wenn nicht: `return false`.
 - die gesamtEinnahmen des Ladens sollen um den Preis des Produktes wachsen und
 - die entsprechende Variable auf `null` zurückgesetzt werden.
 
