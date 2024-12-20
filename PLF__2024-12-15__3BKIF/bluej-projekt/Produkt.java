@@ -3,8 +3,8 @@ public class Produkt {
     private int preis;
 
     public Produkt(String name, int preis) {
-        this.name = name;
-        this.preis = preis;
+        setName(name);
+        setPreis(preis);
     }
 
     public String getName() {
@@ -12,6 +12,9 @@ public class Produkt {
     }
 
     public void setName(String name) {
+        if (null == name) {
+            throw new IllegalArgumentException("Name für das Produkt darf nicht leer sein!");
+        }
         this.name = name;
     }
 
@@ -20,11 +23,14 @@ public class Produkt {
     }
 
     public void setPreis(int preis) {
+        if (preis < 0) {
+            throw new IllegalArgumentException("preis darf nicht kleiner 0 sein!");
+        }
         this.preis = preis;
     }
 
     @Override
     public String toString() {
-        return "";
+        return String.format("Name: %s, Preis: %d Euro", this.name, this.preis);
     }
 }

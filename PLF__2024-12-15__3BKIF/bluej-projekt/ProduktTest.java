@@ -9,6 +9,33 @@ public class ProduktTest {
 
     @Test
     public void produktTest() {
+        String expected = "Name: Korallenkaktus Rhipsalis, Preis: 6 Euro";
+        Produkt produkt = new Produkt("Korallenkaktus Rhipsalis", 6);
+        assertEquals(expected, produkt.toString());
+    }
+
+    @Test
+    public void produktTest2() {
+        boolean wurdeGeworfen = false;
+        try {
+            Produkt prod = new Produkt(null,7);
+        } catch (Exception e) {
+            wurdeGeworfen = true;
+        }
+        assertTrue(wurdeGeworfen);
+        assertEquals(true, wurdeGeworfen);
+    }
+
+    @Test
+    public void produktTest3() {
+        boolean wurdeGeworfen = false;
+        try {
+            Produkt prod = new Produkt("Kaktus",-1);
+        } catch (Exception e) {
+            wurdeGeworfen = true;
+        }
+        assertTrue(wurdeGeworfen);
+        assertEquals(true, wurdeGeworfen);
     }
 
     @BeforeEach
