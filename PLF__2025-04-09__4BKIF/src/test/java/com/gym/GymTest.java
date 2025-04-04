@@ -79,20 +79,35 @@ public class GymTest {
     void sortierenNachName() {
         fuellen();
         gym.sortierenNachName();
-        assertTrue(gym.getMaschinen().getFirst() == maschinen.get(3));
-        assertTrue(gym.getMaschinen().getLast() == maschinen.get(2));
+        assertSame(gym.getMaschinen().getFirst(), maschinen.get(3));
+        assertSame(gym.getMaschinen().getLast(), maschinen.get(2));
     }
 
     @org.junit.jupiter.api.Test
     void entfernenAlle() {
+        fuellen();
+        assertEquals(3, gym.entfernenAlle('B'));
+        assertEquals(3, gym.getMaschinen().size());
+        assertTrue(gym.getMaschinen().contains(maschinen.get(0)));
+        assertTrue(gym.getMaschinen().contains(maschinen.get(1)));
+        assertTrue(gym.getMaschinen().contains(maschinen.get(2)));
+        assertEquals(3, gym.entfernenAlle('e')); ;
+        assertEquals(0, gym.getMaschinen().size());
+        assertEquals(-99, gym.entfernenAlle('x'));
     }
 
     @org.junit.jupiter.api.Test
     void entfernen() {
+        fuellen();
+        maschinen.forEach(m-> assertTrue(gym.entfernen(m)));
+        maschinen.forEach(m-> assertFalse(gym.entfernen(m)));
+        assertFalse(gym.entfernen(null));
     }
 
     @org.junit.jupiter.api.Test
     void maxWartungsIntervall() {
+        fuellen();
+        assertEquals(12, gym.maxWartungsIntervall());
     }
 
     @org.junit.jupiter.api.Test
