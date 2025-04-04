@@ -75,6 +75,9 @@ public class Gym {
                 return -99;
         }
     }
+    public ArrayList<Maschine> getMaschinen () {
+        return new ArrayList<>(maschinen);
+    };
 
     public boolean entfernen(Maschine maschine) {
         return maschine != null && maschinen.remove(maschine);
