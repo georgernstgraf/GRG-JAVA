@@ -4,30 +4,43 @@
 
 Der Code der Testklasse darf während der PLF nicht verändert werden.
 
+Öffnen Sie das Projekt auf Laufwerk "Z:" und lösen Sie dort die Aufgaben.
+
 Ziel der Arbeit ist es, alle Testfälle auf "passed" zu bekommen, indem Code in "main/java"
 gemäß der Angabe editiert wird.
 
 ## Erklärungen zu den einzelnen Testfällen:
 
-### `getGroupedMachines` (anspruchsvoll)
+### `aufstellen` (leicht)
 
-Tipp: Collectors.groupingby
-
-### `getMaxAnzahl` (leicht)
-
-### `entfernenAlle` (gehoben)
-
-Tipp: `List.removeIf(Predicate)`, welches mit Lambda ausgedrückt werden kann 
-
-### `maxWartungsIntervall` (mittel)
+BITTE dies zuerst machen, da die meisten anderen Tests hiervon abhängen!
 
 ### `entfernen` (leicht)
 
-### `aufstellen` (leicht)
- 
-### sortierenNachName() {
+Auch dies bitte eher bald machen, andere Tests hängen hiervon ab!
 
-    public void testEntfernenmaschine_sollFunktionieren_beinpresseNichtImGym_returnsFalse() throws GymException {
-    public void testEntfernenMaschine_sollFunktionieren_beinpresseImGym_returnsTrue() throws GymException {
-    void getMaxPreisEur() {
-    void berechneAvgPreisMaschinen() {
+### `entfernenAlle` (mittel)
+
+Tipp: `List.removeIf(Predicate)`, welches mit Lambda ausgedrückt werden kann 
+
+### `getMaxAnzahl` (superleicht)
+
+### `maxWartungsIntervall` (leicht-mittel)
+
+### `sortierenNachName` (recht leicht)
+
+Wird erst klappen, wenn das aufstellen funktioniert.
+ 
+### `berechneAvgPreisMaschinen` (mittel)
+
+Wird erst klappen, wenn das aufstellen funktioniert.
+
+### `getMaxPreisEur` (leicht)
+
+Wird erst klappen, wenn das aufstellen funktioniert.
+
+### `getGroupedMachines` (anspruchsvoll)
+
+Ziel ist es hier, in einer Map eine Liste mit allen Beinpressen und eine zweite Liste mit allen Ergometern zu erhalten.
+Siehe den Test-Code! Tipp: Collectors.groupingby
+

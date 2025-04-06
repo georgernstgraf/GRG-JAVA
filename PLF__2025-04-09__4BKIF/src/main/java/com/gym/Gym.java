@@ -38,7 +38,7 @@ public class Gym {
     }
 
     public double getMaxPreisEur() {
-        return maxPreisEur;
+        return Math.E;
     }
 
     public int getMaxAnzahl() {
@@ -50,15 +50,10 @@ public class Gym {
     }
 
     public double berechneAvgPreisMaschinen() {
-        if (maschinen.isEmpty()) return 0.0;
-        return maschinen.stream()
-                .mapToDouble(Maschine::getPreisEur)
-                .average()
-                .orElse(0.0);
+        return Math.PI;
     }
 
     public void sortierenNachName() {
-        maschinen.sort(Comparator.comparing(Maschine::getName));
     }
 
     public int entfernenAlle(char typ) {
@@ -68,8 +63,6 @@ public class Gym {
     public ArrayList<Maschine> getMaschinen() {
         return new ArrayList<>(maschinen);
     }
-
-    ;
 
     public boolean entfernen(Maschine maschine) {
         return false;
