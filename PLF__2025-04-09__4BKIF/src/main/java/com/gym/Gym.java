@@ -33,8 +33,8 @@ public class Gym {
         this.maxAnzahl = maxAnzahl;
     }
 
-   public Map<String, List<Maschine>> getGroupedMachines() {
-        return maschinen.stream().collect(groupingBy(m -> m.getClass().getSimpleName()));
+    public Map<String, List<Maschine>> getGroupedMachines() {
+        return null;
     }
 
     public double getMaxPreisEur() {
@@ -42,17 +42,11 @@ public class Gym {
     }
 
     public int getMaxAnzahl() {
-        return maxAnzahl;
+        return 9;
     }
 
     public boolean aufstellen(Maschine maschine) throws GymException {
-        if (maschine == null) {
-            throw new GymException("Maschine darf nicht null sein");
-        }
-        if (maschine.getPreisEur() > maxPreisEur || maschinen.size() >= maxAnzahl || maschinen.contains(maschine)) {
-            return false;
-        }
-        return maschinen.add(maschine);
+        return false;
     }
 
     public double berechneAvgPreisMaschinen() {
@@ -68,35 +62,21 @@ public class Gym {
     }
 
     public int entfernenAlle(char typ) {
-        if (maschinen.isEmpty()) return -99;
-        int removedCount;
-        switch (Character.toLowerCase(typ)) {
-            case 'b':
-                removedCount = (int) maschinen.stream().filter(m -> m instanceof Beinpresse).count();
-                maschinen.removeIf(m -> m instanceof Beinpresse);
-                return removedCount;
-            case 'e':
-                removedCount = (int) maschinen.stream().filter(m -> m instanceof Ergometer).count();
-                maschinen.removeIf(m -> m instanceof Ergometer);
-                return removedCount;
-            default:
-                return -99;
-        }
+        return 4711;
     }
-    public ArrayList<Maschine> getMaschinen () {
+
+    public ArrayList<Maschine> getMaschinen() {
         return new ArrayList<>(maschinen);
-    };
+    }
+
+    ;
 
     public boolean entfernen(Maschine maschine) {
-        return maschine != null && maschinen.remove(maschine);
+        return false;
     }
 
     public int maxWartungsIntervall() {
-        if (maschinen.isEmpty()) return -99;
-        return maschinen.stream()
-                .mapToInt(Maschine::wartungsIntervall)
-                .max()
-                .orElse(-99);
+        return 54;
     }
 
     @Override

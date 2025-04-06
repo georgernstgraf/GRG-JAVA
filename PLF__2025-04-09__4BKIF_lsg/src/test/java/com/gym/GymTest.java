@@ -3,6 +3,8 @@ package com.gym;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -110,8 +112,19 @@ public class GymTest {
         assertEquals(12, gym.maxWartungsIntervall());
     }
 
-    @org.junit.jupiter.api.Test
-    void testErgoClass() {
-        assertEquals("Ergometer", ((Ergometer)maschinen.get(0)).getClassName());
+    @Test
+    void getGroupedMachines() {
+        fuellen();
+        Map<String, List<Maschine>> groupedMachines = gym.getGroupedMachines();
+        assertEquals(2, groupedMachines.size(), "Es gibt 2 Gruppen");
+        assertTrue(groupedMachines.containsKey("Ergometer"), "Es gibt Ergometer");
+        assertTrue(groupedMachines.containsKey("Beinpresse"), "Es gibt Beinpressen");
+        assertEquals(3, groupedMachines.get("Ergometer").size(), "Es gibt 3 Ergometer");
+        assertEquals(3, groupedMachines.get("Beinpresse").size(), "Es gibt 3 Beinpressen");
+        assertTrue(groupedMachines.get("Ergometer").contains(maschinen.get(1)));
+        assertTrue(groupedMachines.get("Beinpresse").contains(maschinen.get(3)));
+        assertTrue(groupedMachines.get("Ergometer").contains(maschinen.get(2)));
+        assertTrue(groupedMachines.get("Beinpresse").contains(maschinen.get(5)));
+
     }
 }
