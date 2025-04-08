@@ -35,7 +35,7 @@ public class GymTest {
     }
 
     @Test
-    void aufstellen() {
+    void aufstellen3P() {
         try {
             Ergometer ergometer = new Ergometer("TestErgo", 2000.0f, 100);
             assertTrue(gym.aufstellen(ergometer));
@@ -51,23 +51,23 @@ public class GymTest {
     }
 
     @org.junit.jupiter.api.Test
-    void getMaxPreisEur() {
+    void getMaxPreisEur4P() {
         assertEquals(5000.0, gym.getMaxPreisEur(), 0.0001, "Falscher MAXpreis");
     }
 
     @org.junit.jupiter.api.Test
-    void getMaxAnzahl() {
+    void getMaxAnzahl2P() {
         assertEquals(gym.getMaxAnzahl(), 10);
     }
 
     @org.junit.jupiter.api.Test
-    void berechneAvgPreisMaschinen() {
+    void berechneAvgPreisMaschinen5P() {
         fuellen();
         assertEquals(2500.0, gym.berechneAvgPreisMaschinen(), 0.0001, "Falscher Durchschnittspreis");
     }
 
     @org.junit.jupiter.api.Test
-    void sortierenNachName() {
+    void sortierenNachName5P() {
         fuellen();
         gym.sortierenNachName();
         try {
@@ -79,7 +79,7 @@ public class GymTest {
     }
 
     @org.junit.jupiter.api.Test
-    void entfernenAlle() {
+    void entfernenAlle5P() {
         fuellen();
         assertEquals(3, gym.entfernenAlle('B'));
         assertEquals(3, gym.getMaschinen().size());
@@ -93,7 +93,7 @@ public class GymTest {
     }
 
     @org.junit.jupiter.api.Test
-    void entfernen() {
+    void entfernen4P() {
         fuellen();
         maschinen.forEach(m -> assertTrue(gym.entfernen(m)));
         maschinen.forEach(m -> assertFalse(gym.entfernen(m)));
@@ -114,13 +114,13 @@ public class GymTest {
     }
 
     @org.junit.jupiter.api.Test
-    void maxWartungsIntervall() {
+    void maxWartungsIntervall5P() {
         fuellen();
         assertEquals(12, gym.maxWartungsIntervall());
     }
 
     @Test
-    void getGroupedMachines() {
+    void getGroupedMachines7P() {
         fuellen();
         Map<String, List<Maschine>> groupedMachines = gym.getGroupedMachines();
         try {
