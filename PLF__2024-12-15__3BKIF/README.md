@@ -98,9 +98,16 @@ Für die Methoden der Klasse Blumenladen.java sind folgende Anforderungen gegebe
 
 #### aufnehmen(Produkt) : boolean (7P)
 
-- Prüfen Sie den Parameter auf null und werfen Sie im Fehlerfall wieder eine IllegalArgumentException: "kein Produkt übergeben".
-- Befüllt zuerst das Attribut produkt1. Ist das Attribut bereits befüllt so wird das Attribut produkt2 befüllt, sofern es nicht ebenso schon mit einer Referenz befüllt ist. Die Aufruferin der Methode soll `true` als Feedback für das erfolgreiche Aufnehmen erhalten.
-- Sind beide Attribute bereits befüllt, kann kein Produkt mehr aufgenommen werden. In diesem Fall soll a) eine Fehlermeldung auf die Konsole ausgegeben werden: "Fehler, kein Platz mehr im Laden!" und b) soll `false` von der Methode retourniert werden.
+- Prüfen Sie den Parameter auf null und werfen Sie im Fehlerfall wieder eine
+IllegalArgumentException: "kein Produkt übergeben".
+- Befüllt zuerst das Attribut produkt1. Ist das Attribut bereits befüllt so wird
+das Attribut produkt2 befüllt, sofern es nicht ebenso schon mit einer Referenz
+befüllt ist. Die Aufruferin der Methode soll `true` als Feedback für das
+erfolgreiche Aufnehmen erhalten.
+- Sind beide Attribute bereits befüllt, kann kein Produkt mehr aufgenommen werden.
+In diesem Fall soll a) eine Fehlermeldung auf die Konsole ausgegeben werden:
+"Fehler, kein Platz mehr im Laden!" und b) soll `false` von der Methode retournier
+werden.
 
 #### verkaufen(Produkt) : boolean (5P)
 
