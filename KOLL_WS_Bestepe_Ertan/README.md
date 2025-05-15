@@ -4,15 +4,18 @@
 
 ### Allgemeine Informationen
 
-- Achten Sie auf die Formatierungen Ihres Codes.
+- Achten Sie auf die Formatierungen Ihres Codes. Unformatierter Code führt zu
+  Punktabzügen.
 - An- und Abgabe erfolgen über das Z-Laufwerk, darin befindet sich das zu
 bearbeitende Java Projekt.
+- Nicht kompilierender Code ergibt negative Note.
+- Der Code der Testklassen **darf nicht verändert** werden.
 
 ## Projekt: Blumenladen
 
 Eine Blumenhändlerin benötigt für die Verwaltung ihrer Produkte eine Java-Applikation.
 
-### UML Diagramm
+## UML Diagramm
 
 ```plantuml
 @startuml
@@ -45,7 +48,7 @@ ProduktTest --> Produkt
 @enduml
 ```
 
-### Aufgabe 1: Klasse Produkt (2P)
+### Klasse Produkt
 
 Erweitern Sie die Klasse Produkt.java und implementieren Sie folgende Punkte:
 
@@ -54,19 +57,19 @@ Erweitern Sie die Klasse Produkt.java und implementieren Sie folgende Punkte:
 
 Erweitern Sie die Klasse Produkt nun um folgende Plausibilitätsprüfungen:
 
-#### setName(…) (2P)
+### Product::setName(…)
 
 - Der Name darf nicht null sein.
 - Wenn der Parameter name den Wert null hat, ist eine
 `new IllegalArgumentException("Name für das Produkt darf nicht leer sein!")` zu werfen.
 
-#### setPreis(…) (2P)
+### Product::setPreis(…)
 
 - Der Parameter preis darf nicht kleiner als 0 sein.
 - Wenn der Parameter preis einen Wert unter 0 hat, ist eine
 `new IllegalArgumentException("Preis muss einen positiven Wert haben!")` zu werfen.
 
-#### Produkt::toString() (2P)
+### Produkt::toString()
 
 Implementieren Sie in der Klasse Produkt die Methode toString() gemäß folgender Vorgabe:
 
@@ -76,18 +79,20 @@ Format: `Name: NAME, Preis: PREIS Euro`. Achten Sie darauf was der Test erwartet
 Name: Korallenkaktus Rhipsalis, Preis: 6 Euro
 ```
 
-### Aufgabe 3: Klasse Blumenladen (5P)
+### Klasse Blumenladen
 
 - Ergänzen Sie die Klasse Blumenladen.java mit allen Variablen und Methoden lt. UML-Diagramm.
 - Überlegen Sie sich, ob Sie einen Konstruktor implementieren müssen (siehe UML-Diagramm).
 
 Für die Methoden der Klasse Blumenladen.java sind folgende Anforderungen gegeben:
 
-#### aufnehmen(Produkt) : boolean (7P)
+### Blumenladen::aufnehmen(Produkt) : boolean
 
-- Prüfen Sie den Parameter auf null und werfen Sie im Fehlerfall wieder eine
+Anforderungen an die Methode:
+
+- Prüfen Sie den Parameter auf null und werfen Sie im Fehlerfall  eine
 IllegalArgumentException: "kein Produkt übergeben".
-- Befüllt zuerst das Attribut produkt1. Ist das Attribut bereits befüllt so wird
+- Versucht, zuerst das Attribut produkt1 zu befüllen. Ist das Attribut bereits befüllt so wird
 das Attribut produkt2 befüllt, sofern es nicht ebenso schon mit einer Referenz
 befüllt ist. Die Aufruferin der Methode soll `true` als Feedback für das
 erfolgreiche Aufnehmen erhalten.
@@ -95,8 +100,9 @@ erfolgreiche Aufnehmen erhalten.
 In diesem Fall soll a) eine Fehlermeldung auf die Konsole ausgegeben werden:
 "Fehler, kein Platz mehr im Laden!" und b) soll `false` von der Methode retournier
 werden.
+- Es soll nicht möglich sein, dass das gleiche Produkt zweimal aufgenommen wird. (return false)
 
-#### verkaufen(Produkt) : boolean (5P)
+### Blumenladen::verkaufen(Produkt) : boolean
 
 Das übergebene Produkt (Instanz) soll verkauft werden. Dazu sollte
 
@@ -105,14 +111,15 @@ Das übergebene Produkt (Instanz) soll verkauft werden. Dazu sollte
 - die gesamtEinnahmen des Ladens sollen um den Preis des Produktes wachsen und
 - die entsprechende Variable auf `null` zurückgesetzt werden.
 
-#### toString() (5P)
+### Blumenladen::toString() : String
 
-Geben Sie sämtliche Informationen eines Blumenladens als String zurück.
+Geben Sie sämtliche Informationen eines Blumenladens als String zurück, inlusive der
+toString()s der Produkte.
 
-### Aufgabe 4: Schachbrett (bonus) (8P)
+## Schachbrett
 
 Stellen Sie die `zeichne()`-Methode in der Klasse Schachbrett fertig. Es sollen sowohl gerade
-als auch ungerade eingaben korrekt verarbeitet werden, wie im folgenden Beispiel: zeichne(8):
+als auch ungerade Eingaben korrekt verarbeitet werden, wie im folgenden Beispiel: zeichne(8):
 
 ```text
 
@@ -128,12 +135,13 @@ als auch ungerade eingaben korrekt verarbeitet werden, wie im folgenden Beispiel
 . # . # . # . #
 ```
 
-erreichbar: 48P (-24/25-30/31-36/37-42/43+)
+## Beurteilung
 
-```text
-  __           _                  ____       _            __  __            _
- / _|_ __ ___ | |__   ___  ___   / ___|  ___| |__   __ _ / _|/ _| ___ _ __ | |
-| |_| '__/ _ \| '_ \ / _ \/ __|  \___ \ / __| '_ \ / _` | |_| |_ / _ \ '_ \| |
-|  _| | | (_) | | | |  __/\__ \   ___) | (__| | | | (_| |  _|  _|  __/ | | |_|
-|_| |_|  \___/|_| |_|\___||___/  |____/ \___|_| |_|\__,_|_| |_|  \___|_| |_(_)
-```
+- 6 Testfälle: pro grünem Test 5 Punkte
+- Schachbrett: 10 Punkte erreichbar
+
+Erreichbar: 40 Punkte
+
+0-20 / 21-25 / 26-30 / 31-35 / 36-40
+
+## Gutes Gelingen
