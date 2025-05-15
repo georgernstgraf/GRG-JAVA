@@ -18,47 +18,47 @@ Eine Blumenhändlerin benötigt für die Verwaltung ihrer Produkte eine Java-App
 @startuml
 class Blumenladen {
 -gesamtEinnahmen : int
--produkt1 : spg.Produkt
-        -produkt2 : spg.Produkt
+-produkt1 : Produkt
+-produkt2 : Produkt
 +Blumenladen()
-+aufnehmen(produkt : spg.Produkt) : boolean
-+verkaufen(produkt : spg.Produkt) : boolean
++aufnehmen(produkt : Produkt) : boolean
++verkaufen(produkt : Produkt) : boolean
 +toString() : String
 +print() : void
 }
 
-class spg.Produkt {
+class Produkt {
 -name : String
 -preis : int
-+spg.Produkt(name:String, preis:int)
-+spg.Produkt(name:String)
++Produkt(name:String, preis:int)
++Produkt(name:String)
 +Alle Getter/Setter
 +toString() : String
 }
 
-class spg.ProduktTest {
+class ProduktTest {
 +produktTest() : void
 }
 
-Blumenladen --> spg.Produkt
-spg.ProduktTest --> spg.Produkt
+Blumenladen --> Produkt
+ProduktTest --> Produkt
 @enduml
 ```
 
-### Aufgabe 1: Klasse spg.Produkt (2P)
+### Aufgabe 1: Klasse Produkt (2P)
 
-Erweitern Sie die Klasse spg.Produkt.java und implementieren Sie folgende Punkte:
+Erweitern Sie die Klasse Produkt.java und implementieren Sie folgende Punkte:
 
 - Beide Konstruktoren gemäß UML-Diagramm.
 - Alle Getter und Setter zu den Attributen sind bereits vorgefertigt.
 
-Erweitern Sie die Klasse spg.Produkt nun um folgende Plausibilitätsprüfungen:
+Erweitern Sie die Klasse Produkt nun um folgende Plausibilitätsprüfungen:
 
 #### setName(…) (2P)
 
 - Der Name darf nicht null sein.
 - Wenn der Parameter name den Wert null hat, ist eine
-`new IllegalArgumentException("Name für das spg.Produkt darf nicht leer sein!")` zu werfen.
+`new IllegalArgumentException("Name für das Produkt darf nicht leer sein!")` zu werfen.
 
 #### setPreis(…) (2P)
 
@@ -66,9 +66,9 @@ Erweitern Sie die Klasse spg.Produkt nun um folgende Plausibilitätsprüfungen:
 - Wenn der Parameter preis einen Wert unter 0 hat, ist eine
 `new IllegalArgumentException("Preis muss einen positiven Wert haben!")` zu werfen.
 
-#### spg.Produkt::toString() (2P)
+#### Produkt::toString() (2P)
 
-Implementieren Sie in der Klasse spg.Produkt die Methode toString() gemäß folgender Vorgabe:
+Implementieren Sie in der Klasse Produkt die Methode toString() gemäß folgender Vorgabe:
 
 Format: `Name: NAME, Preis: PREIS Euro`. Achten Sie darauf was der Test erwartet.
 
@@ -83,22 +83,22 @@ Name: Korallenkaktus Rhipsalis, Preis: 6 Euro
 
 Für die Methoden der Klasse Blumenladen.java sind folgende Anforderungen gegeben:
 
-#### aufnehmen(spg.Produkt) : boolean (7P)
+#### aufnehmen(Produkt) : boolean (7P)
 
 - Prüfen Sie den Parameter auf null und werfen Sie im Fehlerfall wieder eine
-IllegalArgumentException: "kein spg.Produkt übergeben".
+IllegalArgumentException: "kein Produkt übergeben".
 - Befüllt zuerst das Attribut produkt1. Ist das Attribut bereits befüllt so wird
 das Attribut produkt2 befüllt, sofern es nicht ebenso schon mit einer Referenz
 befüllt ist. Die Aufruferin der Methode soll `true` als Feedback für das
 erfolgreiche Aufnehmen erhalten.
-- Sind beide Attribute bereits befüllt, kann kein spg.Produkt mehr aufgenommen werden.
+- Sind beide Attribute bereits befüllt, kann kein Produkt mehr aufgenommen werden.
 In diesem Fall soll a) eine Fehlermeldung auf die Konsole ausgegeben werden:
 "Fehler, kein Platz mehr im Laden!" und b) soll `false` von der Methode retournier
 werden.
 
-#### verkaufen(spg.Produkt) : boolean (5P)
+#### verkaufen(Produkt) : boolean (5P)
 
-Das übergebene spg.Produkt (Instanz) soll verkauft werden. Dazu sollte
+Das übergebene Produkt (Instanz) soll verkauft werden. Dazu sollte
 
 - der Parameter nicht `null` sein (`false` ist zu retournieren).
 - geprüft werden, ob produkt1 oder produkt2 der Parameter sind. Wenn nicht: `return false`.
@@ -109,9 +109,9 @@ Das übergebene spg.Produkt (Instanz) soll verkauft werden. Dazu sollte
 
 Geben Sie sämtliche Informationen eines Blumenladens als String zurück.
 
-### Aufgabe 4: spg.Schachbrett (bonus) (8P)
+### Aufgabe 4: Schachbrett (bonus) (8P)
 
-Stellen Sie die `zeichne()`-Methode in der Klasse spg.Schachbrett fertig. Es sollen sowohl gerade
+Stellen Sie die `zeichne()`-Methode in der Klasse Schachbrett fertig. Es sollen sowohl gerade
 als auch ungerade eingaben korrekt verarbeitet werden, wie im folgenden Beispiel: zeichne(8):
 
 ```text
