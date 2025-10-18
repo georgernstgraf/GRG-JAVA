@@ -1,0 +1,4 @@
+# andere Variante verworfen
+function q (a) {
+  return a^2;
+}
