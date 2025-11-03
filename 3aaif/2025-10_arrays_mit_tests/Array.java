@@ -49,13 +49,27 @@ public class Array {
         return rv;
     }
 
+    public static int abs (int i) {  // Absolut-Wert
+        if (i < 0) return -i;
+        return i;
+    }
     // Das Array enthält positive und negative Zahlen
     // 1) retourniere diejenige Zahl des Arrays, welche am nächsten zu 0 ist. (mit
     // Test)
     // 2) für den Fall, dass eine positive und negative Zahl ex equo liegen, gib die
     // positive zurück
     public static int closestToZero(int[] arg) {
-        return arg[0];
+        int rv = Integer.MAX_VALUE;
+        for (int item: arg) {
+            if (abs(rv) > abs(item)) {
+                rv = item;
+                continue;
+            }
+            if ((abs(rv) == abs(item)) && (item > rv)) {
+                    rv = item;
+            }
+        }
+        return rv;
     }
 
 }
