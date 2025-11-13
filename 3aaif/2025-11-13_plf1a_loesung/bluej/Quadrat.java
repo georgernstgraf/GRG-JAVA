@@ -1,22 +1,24 @@
 public class Quadrat {
-    // wir wollen eine Art "Sanduhr" zeichnen, z.B. so:
-    /*
-    # # # # # # #
-      #       #
-        #   #
-          #
-        #   #
-      #       #
-    # # # # # # #
-     */
     public static void zeichne(int n) {
-        // TODO implementieren
-        throw new UnsupportedOperationException("Noch nicht implementiert");
+        for (int zeile = 0; zeile < n ; zeile++){
+            for(int spalte = 0; spalte < n; spalte++){
+                // erste / letzte Zeile
+                if (zeile == 0 || zeile == n-1) {
+                    System.out.print("# ");
+                    continue;
+                }
+                if (zeile + spalte == n-1) {
+                    System.out.print("§ ");
+                    continue;
+                }
+                if (zeile == spalte) {
+                    System.out.print("# ");
+                    continue;
+                }
+                System.out.print("  ");
+            }
+            System.out.println();
+        }
     }
 
-    public static void main(String[] args) {
-        zeichne(7);
-        System.out.println();
-        zeichne(14);
-    }
 }
