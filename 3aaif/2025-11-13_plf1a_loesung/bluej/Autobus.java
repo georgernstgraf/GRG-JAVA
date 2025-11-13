@@ -1,3 +1,8 @@
+/*
+ * Dominic an i erinnern!!
+ * 
+ */
+
 class Autobus {
 
     private Person[] sitze;
@@ -22,9 +27,9 @@ class Autobus {
             throw new IllegalArgumentException("null sollte nie einsteigen");
         }
         for (int i = 0; i < sitze.length; i++ ) {
-          /*  if (sitze[i] == null) { // also Sitz ist frei
-                sitze[i] = person;
-                return true;
+            /*  if (sitze[i] == null) { // also Sitz ist frei
+            sitze[i] = person;
+            return true;
             } */
             if (sitze[i] != null) continue;
             // sitze[i] ist sicher null wenn ich hier lande
@@ -43,13 +48,12 @@ class Autobus {
         }
         return false;
     }
-    
-    public boolean istVoll () {
-        // TODO implement
-        return false;
+
+    public boolean hatPlatz() {
+       return istDrin(null);
     }
-    public boolean hatPlatz () {
-        // TODO
-        return false;
+
+    public boolean istVoll() {
+        return !istDrin(null);
     }
 }
