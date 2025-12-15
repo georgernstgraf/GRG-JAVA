@@ -13,7 +13,7 @@ public class Main {
                 {0, 1, 0, 0, 1},
                 {1, 1, 0, 1, 0}
         });
-        System.out.println(a.getKnotengrade());
+        System.out.println(a.getKnotengrade());  // Beispiel: [2, 4, 1, 2, 3]
     }
 
     public static void mainAlt(String[] args) {
