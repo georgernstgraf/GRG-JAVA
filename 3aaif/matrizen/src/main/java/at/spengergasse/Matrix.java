@@ -15,6 +15,19 @@ public class Matrix {
         return array[0].length;
     }
 
+    public Matrix p2 () {
+        return multiply(this);
+    }
+    public Matrix p(int n) {
+        if (n < 1) throw new IllegalArgumentException("sorry weiss nicht wie ich das tun soll");
+        if (n == 1) return this;
+        Matrix result = multiply(this); // dzt. result = this^2
+        for (int i = 2; i < n; i++ ) {
+            result = result.multiply(this);
+        }
+        return result;
+    }
+
     public Matrix multiply(Matrix other) {
         if (this.getCols() != other.getRows()) {
             throw new IllegalArgumentException("Incompatible matrix sizes for multiplication.");
