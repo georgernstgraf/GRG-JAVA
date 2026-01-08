@@ -1,5 +1,13 @@
 # sj25-26-34aaif-pos
 
+## 2026-01-08 ArrayList
+
+Übung: Autobus (aus 3aaif/2025-11-13_plf1a_loesung/bluej) mit ArrayList umsetzen.
+
+- neues intellij Projekt
+- .java Files aus dem bluej Projekt an die richtigen Orte des neues Projektes tun.
+- das sitze[] Array durch Arraylist ersetzen und statt der Schleifen die Methoden der ArrayList nutzen.
+
 ## 2025-11-03 Teamarbeit Autobus
 
 einer macht den Bus, der andere die Tests!!
@@ -33,7 +41,6 @@ Vertiefung einsteigen / aussteigen
 HÜ: einsteigen / aussteigen GRÜNDLICH testen UND
 
 @BeforeEach - setup() verwedenden!!
-
 
 try / catch erklären!!
 
