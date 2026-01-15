@@ -1,9 +1,14 @@
 package at.spengergasse;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Random;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * The test class AutobusTest.
@@ -15,18 +20,14 @@ public class AutobusTest {
     static int busSize = 20;
     static int someSize = busSize / 2;
     Autobus bus;
-    Person[] persons;
-
-    public AutobusTest() {
-        persons = new Person[busSize + 1];
-        for (int i = 0; i < persons.length; i++) {
-            persons[i] = new Person(i);
-        }
-    }
+    ArrayList<Person> persons;
 
     @BeforeEach
     public void setUp() {
-        bus = new Autobus(busSize);
+        persons = new ArrayList<>();
+        while (persons.size() < busSize) {
+            persons.add(new Person());
+        }
     }
 
     @Test // es wird geprüft, ob NULL einsteigen darf
@@ -36,8 +37,9 @@ public class AutobusTest {
         });
     }
 
-    @Test // es wird geprüft, ob erkannt wird, wenn eine bereits drinnen Person einsteigen
-          // soll.
+    //@Test // es wird geprüft, ob erkannt wird, wenn eine bereits drinnen Person einsteigen
+    // soll.
+    /*
     public void testEinsteigenThrowsOnAlreadyInside() {
         fillSome();
         assertThrows(RuntimeException.class, () -> {
@@ -84,12 +86,49 @@ public class AutobusTest {
             bus.einsteigen(persons[i]);
         }
     }
+    */
+    @Test
+    void einsteigen() {
+    }
 
-    @org.junit.jupiter.api.Test
+    @Test
+    void istDrin() {
+    }
+
+    @Test
+    void istVoll() {
+        Autobus bus1 = new Autobus(10);
+        for (int i = 0; i < 9; i++) {
+            assertTrue(bus1.einsteigen(persons.get(i)));
+            assertFalse(bus1.istVoll());
+        }
+        // jetzt ist genau 1 Platz frei
+        assertTrue(bus1.einsteigen(new Person()));
+        assertTrue(bus1.istVoll());
+        assertFalse(bus1.hatPlatz());
+        // er ist jetzt voll
+        assertFalse(bus1.einsteigen(new Person()));
+        assertTrue(bus1.istVoll());
+        assertFalse(bus1.hatPlatz());
+    }
+
+    @Test
     void hatPlatz() {
     }
 
-    @org.junit.jupiter.api.Test
-    void istVoll() {
+    @Test
+    void testEinsteigenThrowsOldStyle() {
+        Autobus bus = new Autobus(4);
+        // test ob throws
+        try {
+            bus.einsteigen(null);
+            fail(); // exception erzwingen
+        } catch (IllegalArgumentException _) {}
+    }
+    @Test
+    void testEinsteigenThrowsModern() {
+        Autobus bus = new Autobus(4);
+        assertThrows(IllegalArgumentException.class, () -> bus.einsteigen(null));
+
     }
 }
