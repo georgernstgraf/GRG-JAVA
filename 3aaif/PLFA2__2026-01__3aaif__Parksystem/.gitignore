@@ -1,0 +1,6 @@
+plantuml-images/
+target/
+.settings/
+.project
+.classpath
+.idea/
