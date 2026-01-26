@@ -4,14 +4,15 @@ package at.spengergasse;/*
  */
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 class Autobus {
 
-    private ArrayList<Person> sitze;
+    private HashSet<Person> sitze;
     private int maxsitze;
 
     public Autobus(int maxsitze) {
-        this.sitze = new ArrayList<>();
+        this.sitze = new HashSet<>();
         // eigentlich gehört hier ein setter:
         this.maxsitze = maxsitze;
     }

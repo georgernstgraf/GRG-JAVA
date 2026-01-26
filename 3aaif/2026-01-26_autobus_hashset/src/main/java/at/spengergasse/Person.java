@@ -14,4 +14,16 @@ public class Person {
         // Wir vergeben unsere ID selber
         this.id = rnd.nextInt(1,3001);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || this.getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return id == person.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }
