@@ -4,6 +4,28 @@ Unterrichtsmaterialien für das Fach **POS (Programmieren und Softwareentwicklun
 
 ---
 
+## Beurteilung
+
+Die Note setzt sich aus drei gleich gewerteten Bereichen zusammen:
+
+| Bereich | Gewicht |
+|---|---|
+| PLF (Praxis-Leistungs-Feststellung) | 1/3 |
+| Hausübungen | 1/3 |
+| Mitarbeit | 1/3 |
+
+Mitarbeit umfasst auch Schulübungen und Stundenwiederholungen; deren Qualität und
+Intensität werden von der Lehrperson beurteilt.
+
+## Hausübungen
+
+- **Abgabe:** spätestens am nächsten Unterrichtstag **00:00 Uhr** (in der Regel eine Woche später).
+- **Nachreichung:** jederzeit möglich – die erreichte Punktezahl zählt **75 %**.
+- **Cutoff:** Genau **eine Woche vor dem Notenschluss, 00:00 Uhr**, ist Endtermin.
+  Danach werden die Repos automatisiert ausgewertet.
+
+---
+
 ## 📁 Ordnerstruktur
 
 ### `3aaif/` — Hauptordner mit allen Unterrichtsinhalten
@@ -29,7 +51,7 @@ Die Themen sind chronologisch nach Datum sortiert und bauen didaktisch aufeinand
 
 Begleitend dazu gibt es:
 - `README.md` — detaillierte Stundenbilder und Aufgabenstellungen
-- `NOTE.md` — Notenschlüssel: 2 PLFs + Abgaben, beide Teile positiv erforderlich
+- `NOTE.md` — Notenschlüssel (die verbindliche Beurteilung steht oben im README)
 - `TODO.md` — Vorschau auf kommende Themen
 
 ### `zz_Unterlagen/` — Zusatzmaterialien
