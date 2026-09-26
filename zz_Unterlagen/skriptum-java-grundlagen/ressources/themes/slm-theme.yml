@@ -1,0 +1,241 @@
+extends: default
+brand:
+  primary-color: #0063B2
+  secondary-color: '#FFFFFF'
+  alert-color: '0052A5'
+  black-color: 000000
+
+# Ab wann soll Header und Footer starten
+running-content:
+  start-at: 2
+
+
+font:
+  catalog:
+    Noto Serif:
+      normal: GEM_FONTS_DIR/notoserif-regular-subset.ttf
+      bold: GEM_FONTS_DIR/notoserif-bold-subset.ttf
+      italic: GEM_FONTS_DIR/notoserif-italic-subset.ttf
+      bold_italic: GEM_FONTS_DIR/notoserif-bold_italic-subset.ttf
+    M+ 1mn:
+      normal: GEM_FONTS_DIR/mplus1mn-regular-subset.ttf
+      bold: GEM_FONTS_DIR/mplus1mn-bold-subset.ttf
+      italic: GEM_FONTS_DIR/mplus1mn-italic-subset.ttf
+      bold_italic: GEM_FONTS_DIR/mplus1mn-bold_italic-subset.ttf
+    Anaheim:
+      normal: anaheim-v14-latin-regular.ttf
+      italic: anaheim-v14-latin-regular.ttf
+      bold: anaheim-v14-latin-regular.ttf
+      bold_italic: anaheim-v14-latin-regular.ttf
+    TitilliumWeb:
+      normal: TitilliumWeb-Light.ttf
+      italic: TitilliumWeb-LightItalic.ttf
+      bold: TitilliumWeb-Bold.ttf
+      bold_italic: TitilliumWeb-BoldItalic.ttf
+    Inconsolata:
+      normal: Inconsolata-Light.ttf
+      italic: Inconsolata-Light.ttf
+      bold: Inconsolata-Regular.ttf
+      bold_italic: Inconsolata-Regular.ttf
+    Jetbrains Mono:
+      normal: JetBrainsMono-Light.ttf
+      italic: JetBrainsMono-LightItalic.ttf
+      bold: JetBrainsMono-Regular.ttf
+      bold_italic: JetBrainsMono-BoldItalic.ttf
+    fallbacks:
+      normal: GEM_FONTS_DIR/notoserif-regular-subset.ttf
+      bold: GEM_FONTS_DIR/notoserif-bold-subset.ttf
+      italic: GEM_FONTS_DIR/notoserif-italic-subset.ttf
+      bold_italic: GEM_FONTS_DIR/notoserif-bold_italic-subset.ttf
+
+base:
+  font-color: #000000
+#  font-family: Anaheim
+  font-family: TitilliumWeb
+  font-size: 11
+
+custom:
+  caption:
+    font-size: $base_font_size
+heading:
+  font-color: $brand-primary-color
+  font-family: Anaheim
+  border_color: $base_border_color
+  border_top_width: 1px
+  h1_font_size: floor($base_font_size * 1.5)
+  h2_font_size: floor($base_font_size * 1.3)
+  h3_font_size: floor($base_font_size * 1.25)
+  h4_font_size: floor($base_font_size * 1.2)
+  h5_font_size: floor($base_font_size * 1.15)
+  h6_font_size: floor($base_font_size * 1.1)
+  margin-bottom: 5px
+
+header:
+  border_color: 333333
+  font-size: 9
+  font-color: #A8A8A8
+  border_width: 0.5
+  margin: [28, inherit, 0, inherit]
+  height: $base-line-height-length * 1.8
+  text-transform: uppercase
+  recto:
+    left:
+      content: image:C:\HTL\005-doc\logo\htl-logo.png[width=18] Spengergasse
+    right:
+      content: '{header-title}'
+  verso:
+    left:
+      content: $header_recto_right_content
+    right:
+      content: $header_recto_left_content
+
+footer:
+  font-size:        9
+  font-color:       #A8A8A8
+  border_color:     #333333
+  height:           $base-line-height-length * 2.5
+  line-height:      2
+  recto:
+    right:
+      content: '{localdate} - {authorinitials}'
+    left:
+      content: '{page-number}'
+  verso:
+    left:
+      content: '{localdate} - {authorinitials}'
+#      '{localdate} - {authorinitials}'
+    right:
+      content: $footer-recto-left-content
+
+code:
+  font_color: $base_font_color
+  font_family: Jetbrains Mono
+  font_size: 11px
+  padding: [2, 4, 2, 4]
+  background-color: #F7F7F8
+  border_color:     DDDDDD
+  border_radius: 0
+  border_width: 0.2
+  margin: [10,10,50,10]
+  callout-list:
+    font_size: 22
+    margin-top: 0
+    font-color: 000000
+    background_color: 000000
+    border_color: 000000
+    glyphs: filled
+    margin_top: -$block_margin_bottom / 2
+codespan:
+  font-family: Jetbrains Mono
+  background-color: #F7F7F8
+  border-width: 1
+  border-color: #F7F7F8
+  font-color: $base_font_color
+  font_size: 11px
+  padding: [2,6,2,6]
+  border-radius: 0
+  margin: [10,10,10,10]
+
+kbd:
+  border_offset: 2
+  border_radius: 0
+  margin-bottom: 40
+  padding-bottom: 200
+  font_family: Jetbrains Mono
+  separator: " + "
+  line-height: 1
+
+image:
+  align: center
+  caption:
+    align: center
+    text-align: center
+
+table:
+  border-color: $brand-primary-color
+  grid-color: EFEFEF
+  border-width: 0.5
+  grid-width: 0.5
+  head:
+    background-color: $brand-primary-color
+    font-color: #FFFFFF
+    border-top-width: 1
+    border-right-width: 1
+    border-left-width: 1
+    border-bottom-width: 1
+    cell-padding: [ 2, 4, 0, 4 ]
+  body:
+    stripe-background-color: #FAFAFA
+    cell-padding: [ 2, 4, 0, 4 ]
+  cell:
+    padding: [ 2, 4, 0, 4 ]
+admonition:
+  text:
+    font_color:      #AFAFAF
+  caption:
+    font_color:       $brand-primary-color
+    font-style:       bold
+
+page:
+  margin: [ 0.8in, 0.67in, 0.4in, 0.67in ]
+
+title_page:
+  font_family: Anaheim
+  font_color: ffffff
+  background_color: #1d4e89
+  align: center
+
+role:
+  title_page_title:
+    font-color: $brand-primary-color
+    font_size: floor($base_font_size * 2.5)
+    text_align: center
+    font-style: bold
+  title_page_lable:
+    font-size: 20
+    font-color: #AAAAAA
+  title_page_value:
+    font-size: 20
+
+block:
+  caption:
+    font_color: #7a2518
+    font-size: 40
+  title:
+    font_size: round($base_font_size * 1.8)
+    font-style: bold
+
+thematic-break:
+  border-color: BFBFBF
+  padding: [ 5, 0, 10, 0 ]
+
+conum:
+  border_offset: 1
+  font-color: $base_font_color
+  glyphs: filled
+  font_size: $base_font_size
+  line_height: 0.9
+
+caption:
+  align: justify
+  text-decoration-color: #00ff00
+  font-size: $custom-caption-font-size
+
+list:
+  indent: $base-font-size * 1.2
+  item-spacing: 3
+  align: left
+
+ulist:
+  marker:
+    font_family: Anaheim
+    font_size: 13
+    disc:
+      content: "\u2022"
+      font_color: 000000
+    circle:
+      content: "\u2022"
+      font_color: 000000
+    square:
+      content: "\u2022"
+      font_color: 000000
