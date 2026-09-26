@@ -102,6 +102,32 @@ dokumentierte schulinterne Konvention, die die PLF-Terminologie festschreibt.
 - **Rest-Risiko:** Ein negativ Beurteilter könnte die Form bestreiten; daher ist
   die dokumentierte PLF-Konvention (schulautonom/Fachgruppe) wichtig.
 
+## 5a. Konkrete Ausgestaltung der Wiederholer-Angabe (Modell B)
+
+Die Kolloquiumsangabe (`GRG-JAVA-T`, `Kolloquium/2026-09-28_Lager`) setzt um:
+
+- **Adressat:** Studierende mit „Nicht genügend" im Semesterzeugnis → Kolloquium
+  nach **§ 23 Abs 1 SchUG-BKV**.
+- **Punkte:** Kern max **40**, Kür max **20** (Gesamt 60).
+- **Bestanden:** **mindestens 21 von 40 Kern-Punkten** (52,5 % → „überwiegend
+  erfüllt", § 20 Abs 3) **und** erfüllte **Kernklausel**
+  (`Lager.aufnehmen` funktioniert).
+- **Kür:** zählt **nur für die Note**, **nicht** fürs Bestehen.
+- **Notenschlüssel (max 60):** Genügend 21–32 · Befriedigend 33–43 · Gut 44–53 ·
+  Sehr gut 54–60.
+- **Mündliche Kompensation:** Wer < 21 Kern-Punkte bleibt oder die Kernklausel
+  nicht erfüllt, kann einen mündlichen Teil ablegen; Note aus praktischer und
+  mündlicher Leistung. (Nicht verpflichtend — entspricht der gelebten Praxis.)
+- **§ 23-Formalia:** ganzer Modulstoff (Abs 5), Zuhörer (Abs 8), Protokoll
+  (Abs 9), max. zwei Wiederholungen (Abs 7).
+
+**Residualrisiko (dokumentiert):** Der Pfad „≥ 21 Kern-Punkte **ohne**
+mündlichen Teil" lässt die Note allein auf der praktischen Computerarbeit
+beruhen. Wird diese als *schriftliche* Prüfung qualifiziert, verlangt § 23
+Abs 4 lehrplanmäßige Schularbeiten (POS: keine). **Absicherung:** Einordnung als
+**PLF** und/oder dokumentierte schulinterne Konvention; die mündliche
+Kompensation ist demgegenüber unproblematisch.
+
 ## 6. „Nur die PLF zählen" (SchUG-BKV § 21 Abs 1)
 
 - Die Modulnote ist „unter Zugrundelegung **aller** erbrachten Leistungen" zu
