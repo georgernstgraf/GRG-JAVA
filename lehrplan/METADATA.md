@@ -81,7 +81,8 @@ Konsequenz für Kolloquien: siehe [`LEHRPLAN.md`](LEHRPLAN.md), Abschnitt
 | [`LEHRPLAN.md`](LEHRPLAN.md) | Dreischichtig: ① offizieller POS-Extrakt (368/2022, Anlage 1.9) · ② Schuladaption (Fachgruppen-LSV) · ③ Didaktik (Java-Skriptum) — form-übergreifend |
 | [`RIS.md`](RIS.md) | Rechtsstand, Fundstellen, Novellen-Historie |
 | [`DECISIONS.md`](DECISIONS.md) | Lehrplan-Entscheidungen dieses Repos |
-| [`RECHT-KOLLOQUIUM.md`](RECHT-KOLLOQUIUM.md) | Rechtsanalyse: Leistungsfeststellung/Kolloquium in POS (LBVO, SchUG-BKV §§ 19–23) |
+| [`RECHT-KOLLOQUIUM.md`](RECHT-KOLLOQUIUM.md) | Rechtsanalyse: PLF/Leistungsfeststellung/Kolloquium in POS (LBVO, SchUG-BKV §§ 19–23) |
+| [`PRAXIS-FACHGRUPPE.md`](PRAXIS-FACHGRUPPE.md) | Belege zur gelebten Fachgruppen-Praxis (PLF/PLÜ, Protokolle, LSV) |
 | `RIS/` | RIS-Gesetzestext-PDFs (`YYYY-MM-DD_…pdf`) |
 | `kompetenzmodule/` | Didaktische KM-Steckbriefe `km1–km6` + README-Matrix (POS) |
 | `../unterricht/POS/` | Lehrstoffverteilung Jahr 1 (verweist auf das Skriptum) |

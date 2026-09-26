@@ -11,3 +11,7 @@ Read this file carefully before making changes in affected areas.
   nicht als Stoff genannt, werden im Unterricht aber als gute Praxis verwendet.
 - Das Skriptum existiert zweimal (Fachgruppen-Repo und Repo-Kopie) — bei
   Aktualisierung Quelle und Kopie abgleichen.
+- **Terminologie Leistungsfeststellung:** In formellen Texten „praktische
+  Leistungsfeststellung" (PLF) verwenden, nicht „(Leistungs-)Überprüfung" —
+  letzteres ist kein LBVO-Begriff und riskiert die Einordnung als Test (§ 8
+  LBVO, mit 25/80-Min-Kappen). Details: `lehrplan/RECHT-KOLLOQUIUM.md`.
