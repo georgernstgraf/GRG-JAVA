@@ -52,7 +52,8 @@ Die Anlage 1.9 enthält `Schularbeiten:`-Blöcke **nur** bei Deutsch, Englisch u
 Angewandter Mathematik (bzw. in anderen Fachrichtungen z. B. Holzbau). Der
 POS-Abschnitt enthält **keinen** solchen Block. → **POS hat keine
 lehrplanmäßigen Schularbeiten.** Rechtsfolge für Kolloquien in
-[`LEHRPLAN.md`](LEHRPLAN.md), Abschnitt „Schularbeiten-Befund".
+[`LEHRPLAN.md`](LEHRPLAN.md), Abschnitt „Schularbeiten-Befund"; vertiefte
+Rechtsanalyse: [`RECHT-KOLLOQUIUM.md`](RECHT-KOLLOQUIUM.md).
 
 ## 6. Konsequenzen für dieses Repo
 
